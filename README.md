@@ -13,6 +13,6 @@
 
 Ensure the build process is not broken
 
-### `npm run build`
+### `build([path])`
 
-Compile plugin source located in the `src` directory and copy the resulting binaries to the `dist` directory (optionally a local game path as well, specified in `package.json` under `amxmodx.path`)
+Compile plugin source located in the `src` directory and copy the resulting binaries to the `dist` directory (optionally a local game path as well, specified by `path`)

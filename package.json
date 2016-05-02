@@ -17,11 +17,14 @@
   "homepage": "https://github.com/tenub/amxmodx-build#readme",
   "dependencies": {
     "glob": "^7.0.3",
+    "graceful-fs": "^4.1.3",
     "recursive-copy": "tenub/recursive-copy",
     "rimraf": "^2.5.2"
   },
   "engines": {
     "node": ">=6.0.0"
   },
-  "os": ["win32"]
+  "os": [
+    "win32"
+  ]
 }
