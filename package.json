@@ -23,8 +23,5 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "os": ["win32"],
-  "amxmodx": {
-    "path": "C:/Program Files (x86)/Steam/steamapps/common/Half-Life/cstrike/addons/amxmodx"
-  }
+  "os": ["win32"]
 }

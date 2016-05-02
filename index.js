@@ -16,7 +16,7 @@ module.exports = (amxxpath) => {
 	rmrf('{build,dist}', err => {
 		if (err) throw err;
 
-		copy('src/tools', 'build', err => {
+		copy(`${__dirname}/src/tools`, 'build', err => {
 			if (err) throw err;
 
 			copy('src', 'build', { dot: 'true', filter: '{include/**,*.sma}' }, err => {
