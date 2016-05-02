@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Build and compile AMXX plugins with ease",
   "scripts": {
-    "lint": "eslint **.js",
-    "build": "node index"
+    "lint": "eslint **.js"
   },
   "repository": {
     "type": "git",
