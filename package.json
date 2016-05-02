@@ -1,0 +1,31 @@
+{
+  "name": "amxmodx-build",
+  "version": "1.0.0",
+  "description": "Build and compile AMXX plugins with ease",
+  "scripts": {
+    "lint": "eslint **.js",
+    "build": "node build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tenub/amxmodx-build.git"
+  },
+  "author": "Joseph Chrzan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tenub/amxmodx-build/issues"
+  },
+  "homepage": "https://github.com/tenub/amxmodx-build#readme",
+  "dependencies": {
+    "glob": "^7.0.3",
+    "recursive-copy": "tenub/recursive-copy",
+    "rimraf": "^2.5.2"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "os": ["win32"],
+  "amxmodx": {
+    "path": "C:/Program Files (x86)/Steam/steamapps/common/Half-Life/cstrike/addons/amxmodx"
+  }
+}
