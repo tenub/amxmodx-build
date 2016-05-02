@@ -1,4 +1,4 @@
-# amxmodx-plugins
+# amxmodx-build
 
 > Build amxmodx plugins efficiently
 
