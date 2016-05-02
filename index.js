@@ -2,19 +2,15 @@
 
 const fs = require('fs');
 const exec = require('child_process').execFile;
-const pkg = require('./package.json');
 const copy = require('recursive-copy');
 const glob = require('glob');
 const rmrf = require('rimraf');
 
-
-module.exports = () => {
-	if (pkg.amxmodx && pkg.amxmodx.path) {
-		fs.access(pkg.amxmodx.path, fs.W_OK, err => {
+module.exports = (amxxpath) => {
+	if (amxxpath) {
+		fs.access(amxxpath, fs.W_OK, err => {
 			if (err) throw err;
 		});
-
-		var amxxPath = pkg.amxmodx.path;
 	}
 
 	rmrf('{build,dist}', err => {
@@ -28,8 +24,8 @@ module.exports = () => {
 
 				copy('src', 'dist/addons/amxmodx', { filter: 'modules/**' }, err => { if (err) throw err; });
 
-				if (amxxPath) {
-					copy('src', amxxPath, { filter: 'modules/**' });
+				if (amxxpath) {
+					copy('src', amxxpath, { filter: 'modules/**' });
 				}
 
 				glob('*.sma', { cwd: 'src' }, (err, files) => {
@@ -43,8 +39,8 @@ module.exports = () => {
 
 							copy('build', 'dist/addons/amxmodx/plugins', { filter: renameFileExt(filename, 'amxx'), overwrite: true }, err => { if (err) throw err; });
 
-							if (amxxPath) {
-								copy('build', `${amxxPath}/plugins`, { filter: renameFileExt(filename, 'amxx'), overwrite: true }, err => { if (err) throw err; });
+							if (amxxpath) {
+								copy('build', `${amxxpath}/plugins`, { filter: renameFileExt(filename, 'amxx'), overwrite: true }, err => { if (err) throw err; });
 							}
 						});
 					});
