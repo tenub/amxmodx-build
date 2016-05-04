@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/tenub/amxmodx-build#readme",
   "dependencies": {
+    "bluebird": "^3.3.5",
     "copy": "^0.2.0",
     "glob": "^7.0.3",
     "graceful-fs": "^4.1.3",
