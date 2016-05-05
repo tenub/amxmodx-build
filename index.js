@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib/build');
+module.exports = require('./lib/buildAsync');
