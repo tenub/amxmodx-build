@@ -9,10 +9,12 @@
 
 ## Usage
 
-### `npm run lint`
+Import the module in a project. Executing the resulting function will compile plugin source code located in the `src` directory and copy the resulting binaries to the `dist` directory and the `options.gamepath` directory, if specified.
 
-Ensure the build process is not broken
+### Example
 
-### `build([path])`
+```js
+const build = require('amxmodx-build');
 
-Compile plugin source located in the `src` directory and copy the resulting binaries to the `dist` directory (optionally a local game path as well, specified by `path`)
+build({ gamepath: '/path/to/game' });
+```
