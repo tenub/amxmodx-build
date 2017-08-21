@@ -1,6 +1,3 @@
-build
-compiled
-dist
-node_modules
-.env
-npm-debug.log
+build/
+dist/
+node_modules/
